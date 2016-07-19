@@ -22,8 +22,8 @@ func Contains(slc interface{}, verItems ...interface{}) (bool, error) {
 
 	itensToCheck := len(verItems)
 	checks := 0
-	for _, v := range verItems {
-		for _, r := range ret {
+	for _, r := range ret {
+		for _, v := range verItems {
 			if v == r {
 				checks++
 			}
