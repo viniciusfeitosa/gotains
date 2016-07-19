@@ -26,12 +26,12 @@ func Contains(slc interface{}, verItems ...interface{}) (bool, error) {
 		for _, v := range verItems {
 			if v == r {
 				checks++
+				if checks == itensToCheck {
+					return true, nil
+				}
 			}
 		}
 	}
 
-	if checks == itensToCheck {
-		return true, nil
-	}
 	return false, nil
 }
